@@ -1,0 +1,25 @@
+# Armstrong Number Checker
+
+# Taking input from user
+num = int(input("Enter a number: "))
+
+# Store original number
+original_num = num
+
+# Count number of digits
+digits = len(str(num))
+
+# Variable to store sum
+sum = 0
+
+# Loop through each digit
+while num > 0:
+    digit = num % 10
+    sum += digit ** digits
+    num = num // 10
+
+# Check Armstrong condition
+if sum == original_num:
+    print(original_num, "is an Armstrong Number")
+else:
+    print(original_num, "is not an Armstrong Number")
